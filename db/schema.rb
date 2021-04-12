@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 2021_04_12_203003) do
 
   create_table "claimants", force: :cascade do |t|
     t.bigint "post_id"
-    t.bigint "claimant_id_id"
+    t.bigint "claimant_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["claimant_id_id"], name: "index_claimants_on_claimant_id_id"
+    t.index ["claimant_id"], name: "index_claimants_on_claimant_id"
     t.index ["post_id"], name: "index_claimants_on_post_id"
   end
 
@@ -45,6 +45,6 @@ ActiveRecord::Schema.define(version: 2021_04_12_203003) do
   end
 
   add_foreign_key "claimants", "posts"
-  add_foreign_key "claimants", "users", column: "claimant_id_id"
+  add_foreign_key "claimants", "users", column: "claimant_id"
   add_foreign_key "posts", "users"
 end
