@@ -3,18 +3,18 @@ class User < ApplicationRecord
   has_many :posts
   has_many :claimants
 
-  has_one_attached :profile_image
+  has_one_attached :avatar
   validate :acceptable_image
 
   def acceptable_image
-    return unless profile_image.attached?
-    unless profile_image.byte_size <= 1.megabyte
-      error.add(:profile_image, "Image exceeds 1 MB limit")
+    return unless avatar.attached?
+    unless avatar.byte_size <= 1.megabyte
+      error.add(:avatar, "Image exceeds 1 MB limit")
     end
 
     acceptable_types = ["image/jpeg", "image/png"]
-    unless acceptable_types.include?(profile_image.content_type)
-      errors.add(:profile_image, "File type must be JPEG or PNG")
+    unless acceptable_types.include?(avatar.content_type)
+      errors.add(:avatar, "File type must be JPEG or PNG")
     end
   end
 end
