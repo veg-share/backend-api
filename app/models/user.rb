@@ -6,6 +6,9 @@ class User < ApplicationRecord
   has_one_attached :avatar
   validate :acceptable_image
 
+  validates :password, presence: true, on: :create
+  validates :password, length: { minimum: 6 }, allow_blank: true
+
   def acceptable_image
     return unless avatar.attached?
     unless avatar.byte_size <= 1.megabyte
