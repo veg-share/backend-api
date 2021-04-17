@@ -28,4 +28,5 @@ class BackendApiSchema < GraphQL::Schema
     # find an object in your application
     # ...
   end
+
 end

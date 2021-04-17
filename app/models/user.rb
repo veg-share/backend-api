@@ -1,13 +1,20 @@
 class User < ApplicationRecord
   has_secure_password
+
+  attr_accessor :password_confirmation
+
   has_many :posts
   has_many :claimants
 
   has_one_attached :avatar
   validate :acceptable_image
 
+  validates :username, uniqueness: true, presence: true
   validates :password, presence: true, on: :create
   validates :password, length: { minimum: 6 }, allow_blank: true
+  validates :zip_code, presence: true
+  validates :city, presence: true
+  validates :state, presence: true
 
   def acceptable_image
     return unless avatar.attached?
@@ -20,4 +27,7 @@ class User < ApplicationRecord
       errors.add(:avatar, "File type must be JPEG or PNG")
     end
   end
+
+
+  #validates :password, presence: true, confirmation: true
 end

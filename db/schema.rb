@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2021_04_14_201941) do
     t.string "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "profile_image"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
