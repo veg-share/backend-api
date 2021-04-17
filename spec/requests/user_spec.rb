@@ -4,7 +4,7 @@ RSpec.describe "User" do
   describe "(happy path)" do
     before :each do
       @image_file = fixture_file_upload('files/test_image.png', 'image/png')
-      @user = build(:user)
+      @user = create(:user)
     end
 
     it "can upload a profile image" do
