@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   def update
     user = User.find(params[:id])
     if params[:avatar] && user.avatar.attached?
-      user.avatar.purge
       user.avatar.attach(user_params[:avatar])
       user.save!
     elsif params[:avatar]
