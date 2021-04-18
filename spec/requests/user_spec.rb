@@ -36,7 +36,7 @@ RSpec.describe "User" do
       patch user_path(@user), params: { user_id: @user.id, avatar: @new_image_file }
 
       @user.reload
-require 'pry'; binding.pry
+
       expect(@user.avatar.attached?).to be true
     end
   end
