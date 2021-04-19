@@ -24,7 +24,7 @@ class User < ApplicationRecord
 
     acceptable_types = ["image/jpeg", "image/png"]
     unless acceptable_types.include?(avatar.content_type)
-      errors.add(:avatar, "File type must be JPEG or PNG")
+      errors.add(:avatar , "File type must be JPEG or PNG")
     end
   end
 
