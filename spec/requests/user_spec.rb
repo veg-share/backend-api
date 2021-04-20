@@ -10,7 +10,7 @@ RSpec.describe "User" do
     it "can upload a profile image" do
       expect(@user.avatar.attached?).to be false
 
-      put user_path(@user), params: { user_id: @user.id, avatar: @image_file }
+      put api_v1_user_path(@user), params: { user_id: @user.id, avatar: @image_file }
       
       @user.reload
 
@@ -22,7 +22,7 @@ RSpec.describe "User" do
       expect(@user.avatar.attached?).to be false
 
       expect {
-        put user_path(@user), params: { user_id: @user.id, avatar: @image_file }
+        put api_v1_user_path(@user), params: { user_id: @user.id, avatar: @image_file }
       }.to change(ActiveStorage::Attachment, :count).by(1)
       
       @user.reload
