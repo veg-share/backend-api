@@ -13,5 +13,10 @@ module Types
     def posts
       object.posts
     end
+
+    field :avatar, String, null: true
+    def avatar
+      Rails.application.routes.url_helpers.rails_blob_path(object.avatar, only_path: true) if object.avatar.attached?
+    end
   end
 end
