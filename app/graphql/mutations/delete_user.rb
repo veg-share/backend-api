@@ -5,6 +5,9 @@ module Mutations
 
     def resolve(id:)
       user = User.find(id)
+      user.posts.each do |post|
+        post.delete
+      end
       user.delete
       id
     end
