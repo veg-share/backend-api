@@ -4,6 +4,26 @@ module Types
     # include GraphQL::Types::Relay::HasNodeField
     # include GraphQL::Types::Relay::HasNodesField
 
+    #post
+
+    #index
+    field :get_all_posts, [Types::PostType], null: false
+    def get_all_posts
+      Post.all
+    end
+
+    #show
+    field :get_one_post, PostType, null: true do
+      description "Find a user by id"
+      argument :id, ID, required: true
+    end
+    def get_one_post(id:)
+      Post.find(id)
+    end
+
+
+    #user
+
     #index
     field :get_all_users, [Types::UserType], null: false
     def get_all_users
