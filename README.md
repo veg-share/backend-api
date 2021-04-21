@@ -140,9 +140,9 @@ Unsuccessful response:
 <!-- CONTACT -->
 ## Contact
 
-Aiden Mendez — [LinkedIn](https://linkedin.com/in/aidenmendez)
-
 Grayson Myers - [LinkedIn](https://www.linkedin.com/in/grayson-myers-285926165/)
+
+Aiden Mendez — [LinkedIn](https://linkedin.com/in/aidenmendez)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
