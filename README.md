@@ -149,7 +149,8 @@ Grayson Myers - [LinkedIn](https://www.linkedin.com/in/grayson-myers-285926165/)
 [linkedin-url]: https://linkedin.com/in/aiden-mendez
 [circleci-shield]: https://circleci.com/gh/veg-share/backend-api.svg?style=svg
 [circleci-url]: https://app.circleci.com/pipelines/github/veg-share/backend-api
-
+[contributors-shield]: https://img.shields.io/github/contributors/veg-share/backend-api.svg?style=for-the-badge
+[contributors-url]: https://github.com/veg-share/backend-api/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/veg-share/backend-api.svg?style=for-the-badge
 [forks-url]: https://github.com/veg-share/backend-api/network/members
 [stars-shield]: https://img.shields.io/github/stars/veg-share/backend-api.svg?style=for-the-badge
