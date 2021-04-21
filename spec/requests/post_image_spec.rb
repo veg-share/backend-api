@@ -31,4 +31,23 @@ RSpec.describe "User" do
       expect(@post.image.attached?).to be true
     end
   end
+
+  describe "(sad path)" do
+    before :each do
+      # @image_file = fixture_file_upload('files/large_image.jpeg', 'image/jpeg')
+      create(:user)
+      @post = create(:post)
+    end
+
+    it "returns an error" do
+      # expect(@post.image).to be_nil
+
+      put api_v1_post_path(@post), params: { post_id: @post.id }
+      
+      @post.reload
+      expect(response.status).to eq(400)
+      
+      # expect(@post.image).to be_nil
+    end
+  end
 end
