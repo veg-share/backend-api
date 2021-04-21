@@ -20,6 +20,7 @@ RSpec.describe "User" do
     it "can update a profile image" do
       # upload initial image
       expect(@user.avatar.attached?).to be false
+
       
       @user.reload
 
@@ -31,7 +32,7 @@ RSpec.describe "User" do
       expect(@user.avatar.attached?).to be true
     end
   end
-
+  
   describe "(sad path)" do
     before :each do
       @user = create(:user)

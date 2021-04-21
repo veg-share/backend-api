@@ -1,6 +1,7 @@
 class Api::V1::UsersController < ApplicationController
   def update
     user = User.find(params[:id])
+
     begin
       if user_params[:avatar] != nil
         user.avatar.attach(user_params[:avatar])

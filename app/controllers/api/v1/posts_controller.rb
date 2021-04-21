@@ -1,7 +1,6 @@
 class Api::V1::PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
-    
     begin
       if post_params[:image] != nil
         post.image.attach(post_params[:image])

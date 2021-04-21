@@ -4,6 +4,7 @@ RSpec.describe "User" do
   describe "(happy path)" do
     before :each do
       @image_file = fixture_file_upload('files/watermelon.jpeg', 'image/jpeg')
+
       create(:user)
       @post = create(:post)
     end
@@ -18,7 +19,9 @@ RSpec.describe "User" do
       expect(@post.image.attached?).to be true
     end
 
+
     it "can update a post image" do
+
       # upload initial image
       expect(@post.image.attached?).to be false
 

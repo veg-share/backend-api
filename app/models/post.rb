@@ -7,6 +7,7 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :user_id, presence: true
+
   # validate :acceptable_image
 
   # def acceptable_image

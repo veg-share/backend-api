@@ -7,13 +7,14 @@ class User < ApplicationRecord
   has_many :claimants
 
   has_one_attached :avatar
-  
+
   validates :username, uniqueness: true, presence: true
   validates :password, presence: true, on: :create
   validates :password, length: { minimum: 6 }, allow_blank: true
   validates :zip_code, presence: true
   validates :city, presence: true
   validates :state, presence: true
+
   # validate :acceptable_avatar
 
   # def acceptable_avatar
@@ -27,4 +28,5 @@ class User < ApplicationRecord
   #     errors.add(:avatar , "File type must be JPEG or PNG")
   #   end
   # end
+
 end
