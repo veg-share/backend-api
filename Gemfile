@@ -35,6 +35,7 @@ gem 'image_processing', '~> 1.2'
 gem 'figaro'
 gem 'aws-sdk-s3'
 
+gem 'faker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -45,7 +46,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'faker'
   gem 'capybara'
   gem 'launchy'
   gem 'shoulda-matchers'
