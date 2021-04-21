@@ -14,7 +14,6 @@ module Types
 
     #show
     field :get_one_post, PostType, null: true do
-      description "Find a user by id"
       argument :id, ID, required: true
     end
     def get_one_post(id:)
@@ -32,7 +31,6 @@ module Types
 
     #show
     field :get_one_user, UserType, null: true do
-      description "Find a user by id"
       argument :id, ID, required: true
     end
     def get_one_user(id:)
