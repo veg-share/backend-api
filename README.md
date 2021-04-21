@@ -6,6 +6,11 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
 [![CircleCI][circleci-shield]][circleci-url]
 
 # Garden Party Backend API
@@ -136,10 +141,18 @@ Unsuccessful response:
 ## Contact
 
 Aiden Mendez — [LinkedIn](https://linkedin.com/in/aidenmendez)
+
 Grayson Myers - [LinkedIn](https://www.linkedin.com/in/grayson-myers-285926165/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [linkedin-url]: https://linkedin.com/in/aiden-mendez
-[circleci-shield]: https://circleci.com/gh/aidenmendez/veg-share/backend-api.svg?style=svg
+[circleci-shield]: https://circleci.com/gh/veg-share/backend-api.svg?style=svg
 [circleci-url]: https://app.circleci.com/pipelines/github/veg-share/backend-api
+
+[forks-shield]: https://img.shields.io/github/forks/veg-share/backend-api.svg?style=for-the-badge
+[forks-url]: https://github.com/veg-share/backend-api/network/members
+[stars-shield]: https://img.shields.io/github/stars/veg-share/backend-api.svg?style=for-the-badge
+[stars-url]: https://github.com/veg-share/backend-api/stargazers
+[issues-shield]: https://img.shields.io/github/issues/veg-share/backend-api.svg?style=for-the-badge
+[issues-url]: https://github.com/veg-share/backend-api/issues
