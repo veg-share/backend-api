@@ -31,8 +31,8 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
+    <li><a href="#graphql-endpoint">GraphQL Endpoint</a></li>
     <li><a href="#rest-endpoints">ReST Endpoints</a></li>
-    <li><a href="#non-rest-endpoints">Non-ReST Endpoints</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -86,13 +86,19 @@ This project features:
 * Rails 5.2.4
 
 <!-- USAGE EXAMPLES -->
-## RESTful Endpoints
+## GraphQL Endpoint
+```
+POST http://localhost:3000/graphql
+```
+
+## REST Endpoints
+All image upload functionality is handled through RESTful endpoints.
 
 ### Upload User Avatar
 Required parameters: user id and an image file.
 
 ```
-PUT http://localhost:3000/users/:id
+PUT http://localhost:3000/api/v1/users/:id
 ```
 
 Below is an example of the response body format for a successful upload:
@@ -116,7 +122,7 @@ Unsuccessful response:
 Required parameters: post id and an image file.
 
 ```
-PUT http://localhost:3000/posts/:id
+PUT http://localhost:3000/api/v1/posts/:id
 ```
 
 Below is an example of the response body format for a successful upload:
