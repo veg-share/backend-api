@@ -91,38 +91,39 @@ This project features:
 POST http://localhost:3000/graphql
 ```
 
-Users:
-Fields: id, username, passwordDigest, city, zipCode, state, posts, createdAt, updatedAt
-	*getAllUsers:* returns all users
-	*getOneUser:* returns one user from an id
-		Arguments:
-			id (required)
-	*updateUser:* updates a user’s info specified by id 
-		Arguments:
-			id (required),
-			username, city, state, zipCode (optional)
-	*createUser:* creates a user with specified information
-		Arguments: 
-			Username, city, state, zipCode, password, passwordConfirmation (required)
-	*deleteUser:* deletes the specified user
-		Arguments:
-			id (required)
-Posts:
-Fields: id, userId, tags, title, description, createdAt, updatedAt
-	*getAllPosts:* returns all posts
-	*getOnePost:* returns one post from an id
-		Arguments:
-			id (required)
-	*updatePost:* updates a post’s info specified by id 
-		Arguments:
-			id (required),
-			title, description (optional)
-	*createPost:* creates a post with specified information
-		Arguments: 
-			userId, tags, title, description (required)
-	*deletePost:* deletes the specified post
-		Arguments:
-			id (required)
+Users:<br>
+Fields: id, username, passwordDigest, city, zipCode, state, posts, createdAt, updatedAt<br>
+	**getAllUsers:** returns all users<br>
+	**getOneUser:** returns one user from an id<br>
+		Arguments:<br>
+			id (required)<br>
+	**updateUser:** updates a user’s info specified by id <br>
+		Arguments:<br>
+			id (required),<br>
+			username, city, state, zipCode (optional)<br>
+	**createUser:** creates a user with specified information<br>
+		Arguments: <br>
+			Username, city, state, zipCode, password, passwordConfirmation (required)<br>
+	**deleteUser:** deletes the specified user<br>
+		Arguments:<br>
+			id (required)<br><br>
+
+Posts:<br>
+Fields: id, userId, tags, title, description, createdAt, updatedAt<br>
+	**getAllPosts:** returns all posts<br>
+	**getOnePost:** returns one post from an id<br>
+		Arguments:<br>
+			id (required)<br>
+	**updatePost:** updates a post’s info specified by id <br>
+		Arguments:<br>
+			id (required),<br>
+			title, description (optional)<br>
+	**createPost:** creates a post with specified information<br>
+		Arguments: <br>
+			userId, tags, title, description (required)<br>
+	**deletePost:** deletes the specified post<br>
+		Arguments:<br>
+			id (required)<br>
 
 
 ## REST Endpoints
