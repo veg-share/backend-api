@@ -91,6 +91,40 @@ This project features:
 POST http://localhost:3000/graphql
 ```
 
+Users:
+Fields: id, username, passwordDigest, city, zipCode, state, posts, createdAt, updatedAt
+	*getAllUsers:* returns all users
+	*getOneUser:* returns one user from an id
+		Arguments:
+			id (required)
+	*updateUser:* updates a user’s info specified by id 
+		Arguments:
+			id (required),
+			username, city, state, zipCode (optional)
+	*createUser:* creates a user with specified information
+		Arguments: 
+			Username, city, state, zipCode, password, passwordConfirmation (required)
+	*deleteUser:* deletes the specified user
+		Arguments:
+			id (required)
+Posts:
+Fields: id, userId, tags, title, description, createdAt, updatedAt
+	*getAllPosts:* returns all posts
+	*getOnePost:* returns one post from an id
+		Arguments:
+			id (required)
+	*updatePost:* updates a post’s info specified by id 
+		Arguments:
+			id (required),
+			title, description (optional)
+	*createPost:* creates a post with specified information
+		Arguments: 
+			userId, tags, title, description (required)
+	*deletePost:* deletes the specified post
+		Arguments:
+			id (required)
+
+
 ## REST Endpoints
 All image upload functionality is handled through RESTful endpoints.
 
