@@ -90,40 +90,44 @@ This project features:
 ```
 POST http://localhost:3000/graphql
 ```
+The following is documentation for the exposed GraphQL schema.
+### Users:
+User Type Fields: id, username, passwordDigest, city, zipCode, state, posts, createdAt, updatedAt<br><br>
+### User Queries:
+**getAllUsers:** returns all users<br><br>
+**getOneUser:** returns one user from an id<br>
+	Arguments:<br>
+		id (required)<br><br>
+### User Mutations:
+**updateUser:** updates a user’s info specified by id <br>
+	Arguments:<br>
+		id (required),<br>
+		username, city, state, zipCode (optional)<br><br>
+**createUser:** creates a user with specified information<br>
+	Arguments: <br>
+		Username, city, state, zipCode, password, passwordConfirmation (required)<br>
+**deleteUser:** deletes the specified user<br><br>
+	Arguments:<br>
+		id (required)<br><br>
 
-Users:<br>
-Fields: id, username, passwordDigest, city, zipCode, state, posts, createdAt, updatedAt<br>
-	**getAllUsers:** returns all users<br>
-	**getOneUser:** returns one user from an id<br>
-		Arguments:<br>
-			id (required)<br>
-	**updateUser:** updates a user’s info specified by id <br>
-		Arguments:<br>
-			id (required),<br>
-			username, city, state, zipCode (optional)<br>
-	**createUser:** creates a user with specified information<br>
-		Arguments: <br>
-			Username, city, state, zipCode, password, passwordConfirmation (required)<br>
-	**deleteUser:** deletes the specified user<br>
-		Arguments:<br>
-			id (required)<br><br>
-
-Posts:<br>
-Fields: id, userId, tags, title, description, createdAt, updatedAt<br>
-	**getAllPosts:** returns all posts<br>
-	**getOnePost:** returns one post from an id<br>
-		Arguments:<br>
-			id (required)<br>
-	**updatePost:** updates a post’s info specified by id <br>
-		Arguments:<br>
-			id (required),<br>
-			title, description (optional)<br>
-	**createPost:** creates a post with specified information<br>
-		Arguments: <br>
-			userId, tags, title, description (required)<br>
-	**deletePost:** deletes the specified post<br>
-		Arguments:<br>
-			id (required)<br>
+### Posts:
+Post Type Fields: id, userId, tags, title, description, createdAt, updatedAt<br><br>
+### Post Queries:
+**getAllPosts:** returns all posts<br><br>
+**getOnePost:** returns one post from an id<br>
+	Arguments:<br>
+		id (required)<br><br>
+### Post Mutations:
+**updatePost:** updates a post’s info specified by id <br>
+	Arguments:<br>
+		id (required),<br>
+		title, description (optional)<br><br>
+**createPost:** creates a post with specified information<br>
+	Arguments: <br>
+		userId, tags, title, description (required)<br><br>
+**deletePost:** deletes the specified post<br>
+	Arguments:<br>
+		id (required)<br>
 
 
 ## REST Endpoints
